@@ -1,0 +1,55 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Link.jsx find <a> simulate Link changes the class when hovered 1`] = `
+<a
+  className="normal"
+  href="#"
+  onMouseEnter={[Function]}
+  onMouseLeave={[Function]}
+/>
+`;
+
+exports[`Link.jsx find <a> simulate Link changes the class when hovered 2`] = `
+<a
+  className="hovered"
+  href="#"
+  onMouseEnter={[Function]}
+  onMouseLeave={[Function]}
+/>
+`;
+
+exports[`Link.jsx find <a> simulate Link changes the class when hovered 3`] = `
+<a
+  className="normal"
+  href="#"
+  onMouseEnter={[Function]}
+  onMouseLeave={[Function]}
+/>
+`;
+
+exports[`Link.jsx instance trigger Link changes the class when hovered 1`] = `
+<a
+  className="normal"
+  href="#"
+  onMouseEnter={[Function]}
+  onMouseLeave={[Function]}
+/>
+`;
+
+exports[`Link.jsx instance trigger Link changes the class when hovered 2`] = `
+<a
+  className="hovered"
+  href="#"
+  onMouseEnter={[Function]}
+  onMouseLeave={[Function]}
+/>
+`;
+
+exports[`Link.jsx instance trigger Link changes the class when hovered 3`] = `
+<a
+  className="normal"
+  href="#"
+  onMouseEnter={[Function]}
+  onMouseLeave={[Function]}
+/>
+`;
