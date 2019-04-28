@@ -1,5 +1,7 @@
 import React from 'react';
+import { Provider } from 'react-redux';
 import ReactDOM from 'react-dom';
+import store from './reducers/configureStore';
 import './index.scss';
 import Router from './router/Router.jsx';
 
@@ -8,7 +10,9 @@ import Router from './router/Router.jsx';
 class Root extends React.Component {
   render() {
     return (
-      <Router />
+      <Provider store={store}>
+        <Router />
+      </Provider>
     );
   }
 }

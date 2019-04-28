@@ -1,5 +1,5 @@
 import React from 'react';
-import Content from '../../components/Content/Content.jsx';
+import Counter from '../../components/Counter/Counter.jsx';
 import Link from '../../components/Link/Link.jsx';
 import CheckboxWithLabel from '../../components/CheckboxWithLabel/CheckboxWithLabel.jsx';
 
@@ -10,8 +10,8 @@ class Home extends React.Component {
     return (
       <div>
         <Link>link</Link>
-        <Content />
         <CheckboxWithLabel labelOn="On" labelOff="Off" />
+        <Counter />
       </div>
     );
   }

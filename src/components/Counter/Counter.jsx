@@ -1,29 +1,15 @@
 import React from 'react';
+import PropTypes from 'prop-types';
+import { connect } from 'react-redux';
+import { addCounter } from '../../actions/Counter/counter';
 
-function Title() {
-  return <p>計數器</p>;
-}
-
-class Counter extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      count: 0,
-      name: 'horse',
-    };
-  }
-
+export class Counter extends React.Component {
   render() {
     return (
       <div>
-        <Title />
-
-        姓名
-        <input value={this.state.name} onChange={e => this.setState({ name: e.target.value })} />
+        <span>點了{this.props.count}下</span>
         <br />
-        <span>{this.state.name}點了{this.state.count}下</span>
-        <br />
-        <button onClick={() => { this.setState({ count: this.state.count + 1 }); }}>
+        <button onClick={this.props.addCount}>
           點我加1
         </button>
       </div>
@@ -31,4 +17,17 @@ class Counter extends React.Component {
   }
 }
 
-export default Counter;
+Counter.propTypes = {
+  count: PropTypes.number,
+  addCount: PropTypes.func,
+};
+
+const mapStateToProps = state => ({
+  count: state.reducer.count,
+});
+
+const mapDispatchToProps = dispatch => ({
+  addCount: () => dispatch(addCounter()),
+});
+
+export default connect(mapStateToProps, mapDispatchToProps)(Counter);
